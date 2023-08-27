@@ -26,6 +26,11 @@ const Search = ({ onSearchChange }) => {
   const handleOnChange = (selectedOption) => {
     setSearch(selectedOption);
     onSearchChange(selectedOption);
+
+    
+    if (selectedOption === null) {
+      setSearch(null);
+    }
   };
 
   return (
@@ -35,6 +40,7 @@ const Search = ({ onSearchChange }) => {
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
+      isClearable
     />
   );
 };
