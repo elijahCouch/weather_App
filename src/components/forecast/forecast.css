@@ -1,52 +1,45 @@
-/* Update fonts to a retro-style font */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
   font-family: 'Press Start 2P', sans-serif;
-  background-color: #000;
+  background-color: #081520;
+  margin: 0;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
-  color: #f0c808; /* Bright yellow */
+  color: #f0c808;
   text-transform: uppercase;
 }
-
 .daily-item {
-  background-color: #0e0e0e; /* Bright pink */
+  background-color: #0e0e0e;
   border-radius: 15px;
-  height: 50px;
   margin: 10px;
-  align-items: center;
-  cursor: pointer;
+  padding: 10px 20px;
   display: flex;
-  font-size: 16px;
-  padding: 10px 25px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .icon-small {
-  width: 50px;
+  width: 40px;
+  height: auto;
 }
 
 .daily-item .day {
-  cursor: inherit;
-  color: #00e5ff; /* Cyan */
-  flex: 1 1;
+  color: #00e5ff;
   font-weight: 600;
-  margin-left: 20px;
 }
 
 .description {
-  cursor: inherit;
-  flex: 1 1;
-  margin-right: 20px;
-  text-align: right;
-  color: #f0c808; /* Bright yellow */
+  text-align: center;
+  color: #f0c808;
+  flex-grow: 1;
 }
 
 .min-max {
-  color: #00ff80; /* Bright green */
+  color: #00ff80;
 }
 
 .daily-details-grid {
@@ -69,9 +62,53 @@ body {
 }
 
 .daily-details-grid-item label:first-child {
-  color: #00e5ff; /* Cyan */
+  color: #00e5ff;
 }
 
 .daily-details-grid-item label:last-child {
-  color: #f0c808; /* Bright yellow */
+  color: #f0c808;
+}
+
+@media (max-width: 767px) {
+  .daily-item {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .icon-small {
+    width: 30px;
+  }
+
+  .daily-item .day {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  .description {
+    text-align: center;
+    color: #f0c808;
+    float: left;
+    width: 40%;
+
+  }
+
+  .daily-details-grid {
+    grid-template-columns: auto;
+    padding: 10px;
+  }
+
+  .daily-details-grid-item {
+    height: auto;
+    font-size: 12px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0c808;
+  }
+
+  .daily-details-grid-item:last-child {
+    border-bottom: none;
+  }
+
+  .daily-details-grid-item label:first-child {
+    font-size: 12px;
+  }
 }
